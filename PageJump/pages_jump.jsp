@@ -35,13 +35,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <form action="pages_jump.jsp" method="post">
 	  	<div class="btn-group" data-toggle="buttons">
 			<label class="btn btn-default">
-			  	<input type="radio" name="a" value="a">java
+			  	<input type="radio" name="items" value="a">java
 			</label><br><br>
 			<label class="btn btn-default">
-			  	<input type="radio" name="b" value="b">c++
+			  	<input type="radio" name="items" value="b">c++
 			</label><br><br>
 			<label class="btn btn-default">
-			  	<input type="radio" name="c" value="c">bootstrap
+			  	<input type="radio" name="items" value="c">bootstrap
 			</label><br><br>
 		</div>
 		<br>
@@ -51,16 +51,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </div>
 
 	<%
-	String string1=request.getParameter("a");
-	String string2=request.getParameter("b");
-	String string3=request.getParameter("c");
+	String string=request.getParameter("a");
 	
-	if("a".equals(string1)){
+	if("a".equals(string)){
 	%>
 	<jsp:forward page="ja.jsp"></jsp:forward>
-	<%}else if("b".equals(string2)){ %>
+	<%}else if("b".equals(string)){ %>
 	<jsp:forward page="cpp.jsp"></jsp:forward>
-	<%}else if("c".equals(string3)){ %>	 
+	<%}else if("c".equals(string)){ %>	 
  	<jsp:forward page="bs.jsp"></jsp:forward>
  	<%} %>
  	
